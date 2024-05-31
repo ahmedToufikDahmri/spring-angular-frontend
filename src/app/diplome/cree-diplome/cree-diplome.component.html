@@ -1,0 +1,92 @@
+
+<div>
+<h3>Ajouter un Diplome</h3>
+<form (ngSubmit)= "onSubmit()">
+
+  <table class = "table table-striped"> 
+
+
+    <tbody>
+        <tr>
+        <td>
+
+<div class ="form-group">
+  <label> diplome_id </label>
+  <input type="number" class="form-control" id="diplome_id"
+      [(ngModel)]= "diplome.diplome_id" name="diplome_id" disabled>
+
+</div>
+</td>
+
+<td>
+<div class ="form-group">
+  <label> Universite </label>
+  <input type="text" class="form-control" id="universite"
+      [(ngModel)]= "diplome.universite" name="universite">
+
+</div>
+</td>
+
+<td>
+<div class ="form-group">
+  <label> Annee </label>
+  <input type="text" class="form-control" id="annee"
+      [(ngModel)]= "diplome.annee" name="annee">
+
+</div>
+</td>
+
+<td>
+<div class ="form-group">
+  <label> Specialite </label>
+  <input type="text" class="form-control" id="specialite"
+      [(ngModel)]= "diplome.specialite" name="specialite">
+
+</div>
+</td>
+
+<td>
+<div class ="form-group">
+  <label> Type_Diplome </label>
+  
+<select class="form-control"  id="type_diplome"
+required
+[(ngModel)]="diplome.type_diplome" name="type_diplome">
+<option *ngFor="let type_diplome of type_diplomes" [ngValue]="type_diplome">{{type_diplome.type}}</option>
+</select>
+
+</div>
+</td>
+
+<!-- TO DO enregistrer employe pas compte -->
+
+<td>
+<div class ="form-group">
+  <label> Employe </label>
+  
+<select class="form-control"  id="employe"
+required
+[(ngModel)]="diplome.employe" name="employe">
+<option *ngFor="let compte of comptes" [ngValue]="compte">{{compte.nom}}</option>
+</select>
+
+</div>
+</td>
+
+<td>
+<button (click)="refresh()" class ="btn btn-success" style="margin-top: 25%;" type="submit">Ajouter</button>
+</td>
+
+
+
+
+</tr>
+ 
+</tbody>
+</table>
+</form>
+
+
+
+
+

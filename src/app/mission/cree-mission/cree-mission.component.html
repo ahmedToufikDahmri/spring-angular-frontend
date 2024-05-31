@@ -1,0 +1,80 @@
+
+<div >
+<h3>Ajouter un Mission</h3>
+<form (ngSubmit)= "onSubmit()">
+  
+  <table class = "table table-striped"> 
+  
+  
+      <tbody>
+          <tr>
+          <td>
+
+<div class ="form-group">
+  <label> Mission id </label>
+  <input type="number" class="form-control" id="mission_id"
+      [(ngModel)]= "mission.mission_id" name="mission_id" disabled>
+
+</div></td>
+
+
+<td>
+<div class ="form-group">
+  <label> Nom </label>
+  <input type="text" class="form-control" id="nom"
+      [(ngModel)]= "mission.nom" name="nom" >
+
+</div></td>
+
+<td>
+<div class ="form-group">
+  <label> Date </label>
+  <input type="date" class="form-control" id="date"
+      [(ngModel)]= "mission.date" name="date">
+
+</div></td>
+
+<!-- <div class ="form-group">
+  <label> Employe </label>
+  <input type="text" class="form-control" id="employe"
+      [(ngModel)]= "mission.employe" name="employe">
+
+</div> -->
+
+<!-- TO DO enregistrer employe pas compte -->
+<td>
+<div class ="form-group">
+  <label> Employe </label>
+  
+<select class="form-control"  id="employe"
+required
+[(ngModel)]="mission.employe" name="employe">
+<option *ngFor="let compte of comptes" [ngValue]="compte">{{compte.nom}}</option>
+</select>
+
+</div></td>
+
+<td>
+<div class ="form-group">
+  <label> Description </label>
+  <input type="text" class="form-control" id="description"
+      [(ngModel)]= "mission.description" name="description">
+
+</div></td>
+
+
+
+
+
+<td>
+
+<button (click)="refresh()" class ="btn btn-success"  style="margin-top: 21%;" type="submit">Ajouter</button>
+</td>
+
+</tr>
+   
+</tbody>
+</table>
+</form>
+</div>
+

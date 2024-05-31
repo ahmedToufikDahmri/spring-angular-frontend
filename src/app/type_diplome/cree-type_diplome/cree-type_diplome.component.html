@@ -1,0 +1,68 @@
+<!-- 
+<div class="col-md-6 offset-md-3"  >
+<h3>Ajouter un Type_diplome</h3>
+<form (ngSubmit)= "onSubmit()">
+
+<div class ="form-group">
+  <label> type_diplome_id </label>
+  <input type="number" class="form-control" id="type_diplome_id"
+      [(ngModel)]= "type_diplome.type_diplome_id" name="type_diplome_id" disabled>
+
+</div>
+
+<div class ="form-group">
+  <label> Type </label>
+  <input type="text" class="form-control" id="type"
+      [(ngModel)]= "type_diplome.type" name="type">
+
+</div>
+
+
+<button class ="btn btn-success" type="submit">Ajouter</button>
+
+</form>
+
+</div> -->
+
+
+<div >  
+<h2> Ajouter un Type diplome</h2>
+<form (ngSubmit)= "onSubmit()">
+
+<table class = "table table-striped"> 
+
+
+    <tbody>
+        <tr>
+        <td>
+          <div class ="form-group">
+            <label> type diplome id </label>
+            <input type="number" class="form-control" id="type_diplome_id"
+                [(ngModel)]= "type_diplome.type_diplome_id" name="type_diplome_id" disabled>
+          
+          </div></td>
+
+        <td>
+          <div class ="form-group">
+            <label> Type </label>
+            <input type="text" class="form-control" id="type"
+                [(ngModel)]= "type_diplome.type" name="type">
+          
+          </div></td>
+
+
+
+
+            <td >
+              <button (click)="refresh()" style="margin-top: 11%;" class ="btn btn-success vertical-center" type="submit">Ajouter</button>
+
+            </td>
+
+
+            
+        </tr>
+ 
+    </tbody>
+ </table>
+</form>
+</div>

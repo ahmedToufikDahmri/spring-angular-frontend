@@ -1,0 +1,28 @@
+
+<app-create-departement></app-create-departement> 
+
+<h2> Departement List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> departement_id</th>
+            <th> nom </th>
+            <th> ACTION </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let departement of departements" >
+            <td> {{ departement.departement_id }} </td>
+            <td> {{ departement.nom }} </td>
+
+            <td>
+              <button (click) = "modifierDepartement(departement.departement_id)" class = "btn btn-info">Modifier</button>
+              <button (click) = "supprimerDepartement(departement.departement_id)" class = "btn btn-danger" style="margin-left: 10px">Supprimer</button>
+              <button (click) = "afficherDepartement(departement.departement_id)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>

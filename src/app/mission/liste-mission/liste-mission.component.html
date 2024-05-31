@@ -1,0 +1,35 @@
+
+<app-cree-mission></app-cree-mission>
+
+<h2> Mission List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> mission_id</th>
+            <th> nom </th>
+            <th> ACTION </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let mission of missions" >
+            <td> {{ mission.mission_id }} </td>
+            <td> {{ mission.nom }} </td>
+            <td> {{ mission.date }} </td>
+            <td> {{ mission.employe }} </td>
+            <td> {{ mission.description }} </td>
+            <td> {{ mission.employe }} </td>
+
+
+
+
+            <td>
+              <button (click) = "modifierMission(mission.mission_id)" class = "btn btn-info">Modifier</button>
+              <button (click) = "supprimerMission(mission.mission_id)" class = "btn btn-danger" style="margin-left: 10px">Supprimer</button>
+              <button (click) = "afficherMission(mission.mission_id)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,119 @@
+
+<div>
+<h3>Ajouter un Employe</h3>
+<form (ngSubmit)= "onSubmit()">
+  <table class = "table table-striped"> 
+
+
+<tbody>
+<tr>
+<td>
+<div class ="form-group">
+  <label> employe_id </label>
+  <input type="number" class="form-control" id="employe_id"
+      [(ngModel)]= "employe.employe_id" name="employe_id" disabled>
+
+</div></td>
+<td>
+<div class ="form-group">
+  <label> Poste </label>
+  <input type="text" class="form-control" id="poste"
+      [(ngModel)]= "employe.poste" name="poste">
+
+</div></td>
+
+
+
+
+<!-- <div class ="form-group">
+  <label> compte </label>
+  <input type="number" class="form-control" id="compte"
+      [(ngModel)]= "employe.compte" name="compte">
+
+</div> -->
+
+ <!-- <h4>Compte</h4>
+<mat-form-field>
+  <mat-label>compte</mat-label>
+  <mat-select>
+    <mat-option [(ngModel)]= "employe.compte" *ngFor="let compte of comptes" [value]="compte.compte_id" id="compte" name="compte">
+      {{compte.nom}}{{compte.compte_id}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>  -->
+
+<td>
+<div class="form-group">
+  <label for="compte">compte</label>
+  <select class="form-control"  id="compte"
+          required
+          [(ngModel)]="employe.compte" name="compte">
+    <option *ngFor="let compte of comptes" [ngValue]="compte">{{compte.nom}}</option>
+  </select>
+</div></td>
+
+
+<!-- <div class="form-group">
+  <mat-form-field>
+    <mat-label>compte 2</mat-label>
+    <mat-select formControlName="compte">
+      <mat-option *ngFor="let compte of comptes" [value]="compte">
+        {{compte.nom}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div> -->
+
+
+<!-- <h4>Departement</h4>
+<mat-form-field>
+  <mat-label>departement</mat-label>
+  <mat-select>
+    <mat-option [(ngModel)]= "employe.departement" *ngFor="let departement of departements" [value]="departement.departement_id">
+      {{departement.nom}}
+      
+    </mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<td>
+<div class="form-group">
+  <label for="departement">Departement</label>
+  <select class="form-control"  id="departement"
+          required
+          [(ngModel)]="employe.departement" name="departement">
+    <option *ngFor="let departement of departements" [ngValue]="departement">{{departement.nom}}</option>
+  </select>
+</div></td>
+
+<!-- <div class="form-group">
+  <label for="diplome">Diplome</label>
+  <select class="form-control"  id="diplome"
+          required
+          [(ngModel)]="employe.diplome" name="diplome">
+    <option *ngFor="let diplome of diplomes" [ngValue]="diplome">{{diplome.nom}}</option>
+  </select>
+</div> -->
+
+
+<!-- <div class ="form-group">
+  <label> departement </label>
+  <input type="number" class="form-control" id="departement"
+      [(ngModel)]= "employe.departement" name="departement">
+
+</div> -->
+
+<td >
+<button  (click)="refresh()" style="margin-top: 15%;"  class ="btn btn-success" type="submit">Ajouter</button>
+
+</td>
+
+
+            
+</tr>
+
+</tbody>
+</table>
+</form>
+
+</div>

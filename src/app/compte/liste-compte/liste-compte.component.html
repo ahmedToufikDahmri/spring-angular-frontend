@@ -1,0 +1,36 @@
+<app-create-compte></app-create-compte>
+
+<h2> Compte List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> compte_id</th>
+            <th> nom </th>
+            <th> ACTION </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let compte of comptes" >
+            <td> {{ compte.compte_id }} </td>
+            <td> {{ compte.nom }} </td>
+            <td> {{ compte.prenom }} </td>
+            <td> {{ compte.genre }} </td>
+            <td> {{ compte.date_naissance }} </td>
+            <td> {{ compte.telephone }} </td>
+            <td> {{ compte.adresse }} </td>
+
+
+
+
+            <td>
+              <button (click) = "modifierCompte(compte.compte_id)" class = "btn btn-info">Modifier</button>
+              <button (click) = "supprimerCompte(compte.compte_id)" class = "btn btn-danger" style="margin-left: 10px">Supprimer</button>
+              <button (click) = "afficherCompte(compte.compte_id)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+

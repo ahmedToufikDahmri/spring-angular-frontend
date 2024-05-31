@@ -1,0 +1,27 @@
+<app-create-type_diplome></app-create-type_diplome>
+<h2> Type diplome List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Type diplome id</th>
+            <th> Type </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let type_diplome of type_diplomes" >
+            <td> {{ type_diplome.type_diplome_id }} </td>
+            <td> {{ type_diplome.type }} </td>
+
+            <td>
+              <button (click) = "modifierTypeDiplome(type_diplome.type_diplome_id)" class = "btn btn-info">Modifier</button>
+              <button (click) = "supprimerTypeDiplome(type_diplome.type_diplome_id)" class = "btn btn-danger" style="margin-left: 10px">Supprimer</button>
+              <button (click) = "afficherTypeDiplome(type_diplome.type_diplome_id)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<br><br><br>

@@ -1,0 +1,56 @@
+<h3> View Employee Details</h3>
+<div>
+    <div>
+        <label> <b> ID: </b></label> {{employe.employe_id}}
+    </div>
+    <div>
+        <label> <b> Poste: </b></label> {{employe.poste}}
+    </div>
+    <div>
+        <label> <b> Compte : </b></label> {{employe.compte.nom}}
+    </div>
+    <div>
+      <label> <b> Département : </b></label> {{employe.departement}}
+  </div>
+</div>
+
+
+<!-- <h2> Diplome List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Diplome id</th>
+            <th> Universite </th>
+            <th> Annee </th>
+            <th> Specialite </th>
+            <th> Type Diplome </th>
+            <th> Type Employe </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let diplome of diplomes" >
+            <td> {{ diplome.diplome_id }} </td>
+            <td> {{ diplome.universite }} </td>
+            <td> {{ diplome.annee }} </td>
+            <td> {{ diplome.specialite }} </td>
+            <td> {{ diplome.typeDiplome }} </td>
+            <td> {{ diplome.employe }} </td>
+
+
+
+
+            <td>
+              <button (click) = "modifierDiplome(diplome.diplome_id)" class = "btn btn-info">Modifier</button>
+              <button (click) = "supprimerDiplome(diplome.diplome_id)" class = "btn btn-danger" style="margin-left: 10px">Supprimer</button>
+              <button (click) = "afficherDiplome(diplome.diplome_id)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table> -->
+
+<br><br>
+
+<app-liste-diplome></app-liste-diplome>

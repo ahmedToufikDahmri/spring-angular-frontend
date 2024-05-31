@@ -1,0 +1,54 @@
+
+<div class="col-md-6 offset-md-3"  >
+  <h3>Modifier un Diplome</h3>
+  <form (ngSubmit)= "onSubmit()">
+
+  <div class ="form-group">
+    <label> Diplome id </label>
+    <input type="number" class="form-control" diplome_id="diplome_id"
+        [(ngModel)]= "diplome.diplome_id" name="diplome_id" disabled>
+
+  </div>
+
+
+  <div class ="form-group">
+    <label> Universite </label>
+    <input type="text" class="form-control" id="universite"
+        [(ngModel)]= "diplome.universite" name="universite">
+
+  </div>
+
+  <div class ="form-group">
+    <label> Annee </label>
+    <input type="text" class="form-control" id="annee"
+        [(ngModel)]= "diplome.annee" name="annee">
+
+  </div>
+
+  <div class ="form-group">
+    <label> Specialite </label>
+    <input type="text" class="form-control" id="specialite"
+        [(ngModel)]= "diplome.specialite" name="specialite">
+
+  </div>
+
+  <div class ="form-group">
+    <label> Type Diplome </label>
+    <input type="text" class="form-control" id="typeDiplome"
+        [(ngModel)]= "diplome.type_diplome" name="typeDiplome">
+
+  </div>
+
+  <div class ="form-group">
+    <label> employe </label>
+    <input type="number" class="form-control" id="employe"
+        [(ngModel)]= "diplome.employe" name="employe">
+
+  </div>
+
+
+  <button class ="btn btn-success" type="submit">Modifier</button>
+
+  </form>
+
+  </div>

@@ -1,0 +1,41 @@
+
+ <!-- <button><a routerLink="cree-employe" routerLinkActive="active" class="nav-link" >Ajouter un Employe</a></button>-->
+<app-cree-employe></app-cree-employe>
+
+ <h2> Employe List</h2>
+ <table class = "table table-striped">
+     <thead>
+         <tr>
+             <th> Employe_id</th>
+             <th> Poste </th>
+             <th> Compte</th>
+             <th> Departement</th>
+             <th> Diplome </th>
+             <th> Mission </th>
+             <th> ACTION </th>
+ 
+         </tr>
+     </thead>
+     <tbody>
+         <tr *ngFor = "let employe of employes" >
+             <td> {{ employe.employe_id }} </td>
+             <td> {{ employe.poste }} </td>
+             <td> {{ employe.compte }} </td>
+             <td> {{ employe.departement }} </td>
+             <td>
+               <button (click) = "modifierEmploye(employe.employe_id)" class = "btn btn-info">Modifier</button>
+               <button (click) = "supprimerEmploye(employe.employe_id)" class = "btn btn-danger" style="margin-left: 10px">Supprimer</button>
+               <button (click) = "afficherEmploye(employe.employe_id)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+ 
+             </td>
+ 
+ 
+             <td>
+             <!--    <button (click) = "updateEmploye(Employe.employe_id)" class = "btn btn-info"> Update</button>
+                 <button (click) = "deleteEmploye(Employe.employe_id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                 <button (click) = "EmployeDetails(Employe.employe_id)" class = "btn btn-info" style="margin-left: 10px"> View</button> -->
+             </td>
+         </tr>
+     </tbody>
+ </table>
+<br><br><br>
